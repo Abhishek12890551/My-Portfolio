@@ -1,0 +1,336 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    color: white;
+}
+:root{
+    --primary-color: #00B7FF;
+}
+
+*::-webkit-scrollbar{
+    background-color: #333;
+    width: 1rem;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #00B7FF;
+    border-radius: 50px;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding: 10rem;
+
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #111;
+}
+section{
+    min-height: 100vh;
+    width: 100%;
+    padding: 0 15rem;
+}
+#main{
+    position: relative;
+    background: linear-gradient(to right, #000 ,#111, #222, #333);
+}
+
+aside{
+    position: fixed;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+}
+
+.logo{
+    position: relative;
+}
+
+.name h1{
+    font-size: 4rem;
+}
+nav{
+    position: fixed;
+    height: 100vh;
+    width: 100px;
+    padding: 0 10px;
+    border: 1px solid black;
+    backdrop-filter: blur(2px);
+    background-color: #00000042;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    height: 100%;
+    width: 100%;
+}
+
+nav ul li{
+    list-style: none;
+    transform: rotate(-90deg);
+}
+
+nav ul li a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+
+}
+nav ul li a:hover{
+    color: var(--primary-color);
+}
+#home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+}
+
+.left__home h1{
+    font-size: 7rem;
+    color: var(--primary-color);
+    font-weight: 800;
+    letter-spacing: .15rem;
+}
+.left__home h2{
+    font-size: 5em;
+    font-weight: 800;
+    letter-spacing: .15rem;
+    color: #fff;
+}
+.right__home{
+    position: relative;
+}
+.right__home img{
+    filter: contrast(100%) brightness(0.5);
+}
+/* --------------------about-------------- */
+
+#about{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 4rem;
+    min-height: 70vh;
+}
+.left__about h1{
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 5rem;
+    font-weight: 900;
+    position: relative;
+}
+
+.left__about h1::before{
+    content: "";
+    height: 5px;
+    width: 80px;
+    position: absolute;
+    background-color: #fff;
+    top: -10px;
+}
+.left__about p{
+    font-size: 1.5rem;
+    font-family: Georgia;
+    margin: 2rem 0rem;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.2rem;
+}
+
+.left__about{
+    width: 50%;
+}
+.right__about{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#about .right__about p{
+    font-size: 1.5rem;
+    font-family: Georgia;
+    margin: 1rem 0rem;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.2rem;
+}
+
+.game__about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.game__content h2{
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    font-weight: 800;
+}
+
+
+.game__logo i{
+    font-size: 7rem;
+    color: var(--primary-color);
+}
+
+
+
+#skill{
+    min-height: 30rem;
+    background-color: #191919;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#skill img{
+    height: 25rem;
+    aspect-ratio: 1;
+}
+
+#project {
+    margin-top: 10rem;
+}
+
+#project h1{
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-size: 4rem;
+    margin-top: 4rem;
+    position: relative;
+}
+
+#project h1::before{
+    content: "";
+    height: 5px;
+    width: 80px;
+    position: absolute;
+    background-color: #fff;
+    top: -10px;
+}
+
+.project__contain{
+    height: 60vh;
+    display: flex;
+    align-items: center;gap: 5rem;
+}
+.left__project__contain video{
+    width: 500px;
+    outline: none;
+    border: none;
+    filter: contrast(5) brightness(10);
+}
+
+.right__project__contain p{
+    font-size: 2.2rem;
+}
+/* -----------------Contact--------------- */
+#contact {
+    min-height: 85vh;
+
+}
+
+#contact h1{
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 5rem;
+    position: relative;
+}
+
+#contact h1::before{
+    content: "";
+    height: 5px;
+    width: 80px;
+    position: absolute;
+    background-color: #fff;
+    top: -10px;
+}
+  
+  .contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    align-items: center;
+    justify-content: center;
+    grid-gap: 2rem;
+    height: max-content;
+  }
+  
+  .contact-card {
+    padding: 3.5rem 1rem;
+    border-radius: 10px;
+  }
+  #left-contact{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  #left-contact .icons a {
+    text-decoration: none;
+
+  }
+  #left-contact .icons a i {
+    font-size: 5rem;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+  }
+  #left-contact .icons a i:hover{
+    color: var(--primary-color);
+  }
+
+  
+  #right-contact {
+    box-shadow: 0 10px 30px -15px var(--navy-shadow);
+    height: fit-content;
+  }
+  #right-contact h3 {
+    font-size: 2.75rem;
+    color: var(--textBgColor);
+    margin-bottom: 1rem;
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    outline: none;
+    color: #fff;
+    background-color: #111111;
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border: 0;
+    font-size: 1.5rem;
+  }
+  form button {
+    padding: 1rem 2rem;
+    color: var(--textColor);
+    border: 1px solid var(--textColor);
+    border-radius: 6px;
+    outline: none;
+    background-color: var(--primary-color);
+    margin-top: 1rem;
+    font-size: 2rem;
+    width: fit-content;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    box-shadow: 0.5rem 0.5rem 0 rgba(3, 87, 136, 0.808);
+    transform: translate(-0.5rem, -0.5rem);
+    -webkit-transform: translate(-0.5rem, -0.5rem);
+  }
